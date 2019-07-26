@@ -181,10 +181,11 @@ func (c *Channel) outLoop(m *methods) error {
 	defer c.rh.call(c)
 
 	for {
-		if len(c.out) >= QueueBufferSize-1 {
-			closeChannel(c, m)
-			return ErrorSocketOverflood
-		}
+		//Let code block for now as queue is drained
+		// if len(c.out) >= QueueBufferSize-1 {
+		// 	closeChannel(c, m)
+		// 	return ErrorSocketOverflood
+		// }
 
 		select {
 		case <-c.done:

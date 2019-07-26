@@ -9,8 +9,8 @@ import (
 )
 
 var (
-	ErrorSendTimeout     = errors.New("Timeout")
-	ErrorSocketOverflood = errors.New("Socket overflood")
+	ErrorSendTimeout = errors.New("Timeout")
+	//ErrorSocketOverflood = errors.New("Socket overflood")
 )
 
 /**
@@ -34,9 +34,10 @@ func send(msg *protocol.Message, c *Channel, args interface{}) error {
 		return err
 	}
 
-	if len(c.out) == QueueBufferSize {
-		return ErrorSocketOverflood
-	}
+	//Let code block for now as queue is drained
+	// if len(c.out) == QueueBufferSize {
+	// 	return ErrorSocketOverflood
+	// }
 
 	c.sendOut(command)
 

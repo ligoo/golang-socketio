@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/VerticalOps/golang-socketio/protocol"
+	"github.com/ligoo/golang-socketio/protocol"
 )
 
 const (

@@ -1,3 +1,3 @@
-module github.com/VerticalOps/golang-socketio
+module github.com/ligoo/golang-socketio
 
 go 1.14

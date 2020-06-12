@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/VerticalOps/golang-socketio/protocol"
-	"github.com/VerticalOps/golang-socketio/transport"
+	"github.com/ligoo/golang-socketio/protocol"
+	"github.com/ligoo/golang-socketio/transport"
 )
 
 var (
